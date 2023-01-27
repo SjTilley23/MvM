@@ -1,5 +1,11 @@
 import pygame
+from Character import Character
+from Sprites import Sprite
 
+BLACK = (0,0,0)
+WHITE = (255,255,255)
+RED = (255,0,0)
+character = Sprite(RED,20,20)
 
 pygame.init()
 RUN = True
@@ -16,9 +22,9 @@ while RUN:
     #Background
     window.fill((120,120,120))
     
-
-
-
+    #adding a controllable character with sprites
+    character.draw_player(window)
+    character.move_player()
 
 
 
