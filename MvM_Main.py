@@ -1,5 +1,7 @@
 import pygame
 
+
+pygame.init()
 RUN = True
 window = pygame.display.set_mode([800,800])
 clock = pygame.time.Clock()
