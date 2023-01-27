@@ -2,15 +2,14 @@ import pygame
 from Character import Character
 from Sprites import Sprite
 
-BLACK = (0,0,0)
-WHITE = (255,255,255)
-RED = (255,0,0)
-character = Sprite(RED,20,20)
+player = Sprite((255,0,0),20,20)
+character = Character("placeholder", 1)
 
 pygame.init()
 RUN = True
 window = pygame.display.set_mode([800,800])
 clock = pygame.time.Clock()
+character_chosen = False
 
 while RUN:
 
@@ -21,10 +20,17 @@ while RUN:
     
     #Background
     window.fill((120,120,120))
-    
-    #adding a controllable character with sprites
-    character.draw_player(window)
-    character.move_player()
+
+    if character_chosen == False:
+        selection = input("Choose your character: ")
+        Character.character_selection(character, selection)
+        character_chosen = True
+
+
+    if character_chosen:
+        #adding a controllable character with sprites
+        player.draw_player(window)
+        player.move_player(character.speed)
 
 
 
