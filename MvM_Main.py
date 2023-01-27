@@ -22,8 +22,8 @@ while RUN:
     window.fill((120,120,120))
 
     if character_chosen == False:
-        selection = input("Choose your character: ")
-        Character.character_selection(character, selection)
+        character_selection = input("Choose your character: ")
+        Character.character_selection(character, character_selection)
         character_chosen = True
 
 
