@@ -11,6 +11,9 @@ while RUN:
         if event.type == pygame.QUIT:
             RUN = False
     
+    #Background
+    window.fill((120,120,120))
+    
 
 
 
