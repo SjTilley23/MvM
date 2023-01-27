@@ -1,5 +1,4 @@
 import pygame
-from Character import Character
 
 class Sprite(pygame.sprite.Sprite):
     def __init__(self,color, height, width):
