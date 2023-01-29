@@ -63,8 +63,8 @@ class Drawing:
         #Enumerates the list of text given as an argument and draws each amount
         #at the specific coordinates, also shifts the x coordinate value by the shift in x
         for index, amount in enumerate(text_as_list):
-            Surface = fontFace.render(str(amount), anti_alias, color)
-            window.blit(Surface, (coordinate_x_temp,coordinate_y_temp))
+            surface = fontFace.render(str(amount), anti_alias, color)
+            window.blit(surface, (coordinate_x_temp,coordinate_y_temp))
             coordinate_x_temp += x_offset            
             
             #Tracks the number written in a row and if it reaches the maximum

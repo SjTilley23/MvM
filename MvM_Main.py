@@ -21,12 +21,12 @@ while RUN:
 
     Click = pygame.mouse.get_pressed()
 
-    #exiting the program
+    # Exiting the program
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             RUN = False
     
-    #Background
+    # Background
     window.fill((120,120,120))
 
     if character_chosen == False or play_button_clicked == False:
@@ -61,6 +61,6 @@ while RUN:
 
 
     previous_click = Click[0]
-    clock.tick(30)
+    clock.tick(60)
     pygame.display.flip()
 pygame.quit()
