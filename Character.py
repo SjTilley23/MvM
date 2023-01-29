@@ -3,6 +3,7 @@ class Character:
         self.name = name
         self.speed = speed
     
+    #Characters with different stats, kind of like a list but way more readable
     def character_selection(self,name):
         selection = name
         if selection == "John":

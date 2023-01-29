@@ -31,13 +31,13 @@ while RUN:
     if character_chosen == False:
 
         #Menu Screen on startup
+        Drawing.draw_rect_border(window,325,520,150,50,(150,150,150),(40,40,40),2)
+        Drawing.draw_text(window,"Play Game", 329,522,True,(0,0,0),fontFace)
+        Drawing.repeating_rect(window, 200,100, 100, 100, (255,255,255), (0,0,0), 3, 150,150,3,9)
+
         
-        Drawing.draw_rect_border(window,325,500,150,50,(150,150,150),(40,40,40),2)
-        Drawing.draw_text(window,"Play Game", 329,502,True,(0,0,0),fontFace)
-        
-        
-        if Drawing.click_border(325,475,500,550) and previous_click == False and Click[0]:
-            play_button_clicked = True
+        #if Drawing.click_border(325,475,500,550) and previous_click == False and Click[0]:
+            #play_button_clicked = True
 
 
 

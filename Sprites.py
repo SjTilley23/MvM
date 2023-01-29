@@ -8,9 +8,11 @@ class Sprite(pygame.sprite.Sprite):
         self.image.fill(color)
         self.rect = self.image.get_rect()
 
+    #draws the character onto the screen
     def draw_player(self, window):
         window.blit(self.image, (self.rect.x,self.rect.y))
 
+    #Moves the player with the arrow keys
     def move_player(self, speed):
         key = pygame.key.get_pressed()
         if key[pygame.K_UP]:
