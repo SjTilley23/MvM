@@ -50,3 +50,22 @@ class Drawing:
                 max_in_x_check = 0
 
             list_total -= 1
+    
+    def repeating_text(window, text_as_list, coordinate_x, coordinate_y, anti_alias, color, fontFace, max_in_x, x_offset, y_offset):
+
+        coordinate_x_temp = coordinate_x
+        coordinate_y_temp = coordinate_y
+        max_in_x_temp = 0
+        
+        
+        for index, amount in enumerate(text_as_list):
+            Surface = fontFace.render(str(amount), anti_alias, color)
+            window.blit(Surface, (coordinate_x_temp,coordinate_y_temp))
+            coordinate_x_temp += x_offset            
+            
+            max_in_x_temp += 1
+            if max_in_x_temp == max_in_x:
+                coordinate_x_temp = coordinate_x
+                coordinate_y_temp += y_offset
+                max_in_x_temp = 0
+

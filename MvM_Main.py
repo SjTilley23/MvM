@@ -14,6 +14,7 @@ clock = pygame.time.Clock()
 character_chosen = False
 character_selection_screen = 1
 fontFace = pygame.font.SysFont("Tahoma", 30)
+fontFace2 = pygame.font.SysFont("Tahoma", 15)
 play_button_clicked = False
 
 while RUN:
@@ -34,6 +35,7 @@ while RUN:
         Drawing.draw_rect_border(window,325,520,150,50,(150,150,150),(40,40,40),2)
         Drawing.draw_text(window,"Play Game", 329,522,True,(0,0,0),fontFace)
         Drawing.repeating_rect(window, 200,100, 100, 100, (255,255,255), (0,0,0), 3, 150,150,3,9)
+        Drawing.repeating_text(window,["the classic","the single","the fart","the butt","the placeholder","the placeholder 2"], 205,200,True,(0,0,0),fontFace2,3,150,150)
 
         
         #if Drawing.click_border(325,475,500,550) and previous_click == False and Click[0]:
@@ -52,7 +54,7 @@ while RUN:
         player.draw_player(window)
         player.move_player(character.speed)
 
-
+    
 
 
 
