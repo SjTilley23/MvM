@@ -59,8 +59,8 @@ class Drawing:
         
         
         for index, amount in enumerate(text_as_list):
-            Surface = fontFace.render(str(amount), anti_alias, color)
-            window.blit(Surface, (coordinate_x_temp,coordinate_y_temp))
+            surface = fontFace.render(str(amount), anti_alias, color)
+            window.blit(surface, (coordinate_x_temp,coordinate_y_temp))
             coordinate_x_temp += x_offset            
             
             max_in_x_temp += 1

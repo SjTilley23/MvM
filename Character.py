@@ -11,4 +11,4 @@ class Character:
             self.speed = 1
         if selection == "Sinestra":
             self.name = "Sinestra"
-            self.speed = 10
+            self.speed = 5
