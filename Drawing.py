@@ -116,6 +116,5 @@ class Drawing:
                 
             temp_total -= 1
         
-        #If none of the above conditions have been met the funciton returns false
+        #If none of the above conditions have been met the function returns false
         return False
-    

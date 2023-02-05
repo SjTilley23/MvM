@@ -5,6 +5,7 @@ from Drawing import Drawing
 
 player = Sprite((255,0,0),20,20)
 character = Character("placeholder", 1)
+list_of_walls = []
 
 
 pygame.init()
@@ -35,7 +36,7 @@ while RUN:
         Drawing.draw_rect_border(window,325,520,150,50,(150,150,150),(40,40,40),2)
         Drawing.draw_text(window,"Play Game", 329,522,True,(0,0,0),fontFace)
         Drawing.repeating_rect(window, 200,100, 100, 100, (255,255,255), (0,0,0), 3, 150,150,3,9)
-        Drawing.repeating_text(window,["John","Sinestra","Carlos","Aaron","Paul","Emily","Sinestro","Alucard","Redfleet"], 
+        Drawing.repeating_text(window,["John","Sinestro","Meatball","Aaron","Paul","Emily","Sinestro","Alucard","Redfleet"], 
                                         205,200,True,(0,0,0),fontFace2,3,150,150)
         
         #Determines if the player has clicked a character box and what box they clicked
@@ -51,8 +52,12 @@ while RUN:
 
     #if player has chosen a character this draws it and lets them move it
     if character_chosen and play_button_clicked:
+        direction_this_frame = player.move_player(character.speed)
+        list_of_walls.append(pygame.draw.rect(window, (0,0,0),(500,500,100,150)))
+        colliding_wall = player.character_collision_detect(window, 20,20, list_of_walls)
+        if colliding_wall >= 0:
+            player.collide_correct(direction_this_frame, 1)
         player.draw_player(window)
-        player.move_player(character.speed)
 
     
 
